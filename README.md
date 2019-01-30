@@ -8,3 +8,5 @@ go get ./...
 packr install .
 pomodoro
 ```
+
+ ![screenshot](pomodoro-screenshot.png)
