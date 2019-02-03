@@ -1,0 +1,45 @@
+#container {
+    padding: 5px;
+}
+#start-button {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    border: none;
+}
+#time {
+    font-size: 220px;
+    width: 770px
+}
+#task-input {
+    width: 770px;
+    font-size: 40px;
+}
+#task-list {
+    height: 150px;
+    overflow: scroll;
+}
+#task-list li {
+    list-style: none;
+    font-size: 40px;
+}
+#task-list li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: red; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */ 
+    width: 0.5em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.expired {
+    animation:blinkingText 0.8s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #F00;    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    69%{    color:transparent;  }
+    100%{   color: #F00;    }
+}
